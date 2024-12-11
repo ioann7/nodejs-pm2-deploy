@@ -137,9 +137,8 @@ class Api {
       })
       .then(getResponse)
   }
-  }
-  // Замените на адрес вашего бэкенда
-  const api = new Api('http://localhost:3000');
-  
-  export default api;
-  
+}
+
+const api = new Api('https://api.ioann-mesto.nomorepartiesco.ru');
+
+export default api;

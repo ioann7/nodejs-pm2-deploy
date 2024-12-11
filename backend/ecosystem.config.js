@@ -19,7 +19,7 @@ module.exports = {
       path: DEPLOY_PATH,
       key: DEPLOY_PRIVATE_KEY,
       'pre-deploy-local': `bash scripts/deployEnv.sh ${DEPLOY_USER}@${DEPLOY_HOST} ${DEPLOY_PATH} ${DEPLOY_PRIVATE_KEY}`,
-      'post-deploy': `cd backend && export PATH=$PATH:${DEPLOY_NPM_PATH} && npm i && npm run build && pm2 startOrRestart ecosystem.config.js --env production`,
+      'post-deploy': `cd backend && export PATH=$PATH:${DEPLOY_NPM_PATH} && npm i && npm run build && pm2 startOrRestart ecosystem.config.js`,
     },
   },
 };
